@@ -1,0 +1,632 @@
+$color-primary: #48DA83;
+$color-primary-dark: #18b657;
+$color-green-light: #D5F5E4;
+$color-blue-light: #ccdaff;
+$color-blue: #1C57FE;
+$color-blue-dark: #0d43da;
+$color-yellow: #FFD978;
+
+$spaceamounts: (2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98, 100); // Adjust this to include the pixel amounts you need.
+
+$font-weights: (400, 500, 600, 700); // Leave this variable alone
+
+@each $space in $spaceamounts {
+  .text-#{$space}{
+    font-size: #{$space}px;
+  }
+}
+
+@each $fw in $font-weights {
+  .font-#{$fw}{
+    font-weight: #{$fw};
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {  
+  br{
+    display: none;
+  }
+  .blur, .blur-2, .molecul, .partial-33{
+    width: 10%;
+  }
+  .text-20{
+    font-size: 16px;
+  }
+  .text-24{
+    font-size: 18px;
+  }
+  .text-28{
+    font-size: 20px;
+  }
+  .text-30{
+    font-size: 24px;
+  }
+  .text-40{
+    font-size: 24px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {  
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {  
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {  
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  
+
+}
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'DM Sans', sans-serif;
+  max-width: 1600px;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+@media (min-width: 1200px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+      max-width: 1280px;
+  }
+}
+
+@media (min-width: 992px){
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+.navbar{
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+  font-size: 15px;
+
+  &.comming-soon{
+    position: relative;
+    &::before{
+      content: "Coming Soon!";
+      font-size: 10px;
+      font-weight: 700;
+      color: $color-yellow;
+      position: absolute;
+      top: -4px;
+    }
+  }
+}
+
+.navbar-brand{
+  margin-right: 40px;
+}
+
+.btn{
+  transition: all .3s ease-in;
+  border: none;
+
+  .shadow{
+    filter: drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.25));
+  }
+}
+
+// Button
+.btn-rounded{
+  border-radius: 100px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.btn-xl{
+  font-weight: 700;
+  font-size: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.btn-info{
+  background-color: $color-blue;
+  border-color: $color-blue;
+
+  &:hover{
+    background-color: $color-blue-dark;
+  }
+
+  &:focus{
+    background-color: $color-blue-dark!important;
+    box-shadow: 0 0 0 0.2rem $color-blue-light!important;
+  }
+}
+
+.btn-primary{
+  background-color: $color-primary;
+  border-color: $color-primary;
+
+  &:hover{
+    background-color: $color-primary-dark;
+  }
+
+  &:focus{
+    background-color: $color-primary-dark!important;
+    box-shadow: 0 0 0 0.2rem $color-green-light!important;
+  }
+}
+
+.btn-light{
+  background-color: white;
+
+  &:hover{
+    background-color: white;
+  }
+
+  &:focus{
+    background-color: white;
+  }
+}
+
+.btn-token{
+  position: relative;
+  padding-right: 75px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
+  
+  &.btn-light{
+    color: $color-primary;
+    &:hover{
+      color: $color-primary;
+    }
+  }
+
+  &.btn-primary{
+    color: white;
+  }
+  
+  &.btn-xl{
+    padding-right: 105px;
+    font-size: 24px;
+  }
+
+  .token-icon{
+    position: absolute;
+    width: 83px;
+    height: 70px;
+    right: -10px;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    transform: translate(0, -50%);
+
+    &.lg{
+      width: 103px;
+      height: 90px;
+    }
+  }
+}
+// Button end
+
+// Text color
+.text-yellow{
+  color: $color-yellow;
+}
+
+.text-primary{
+  color: $color-primary!important;
+}
+
+.text-blue{
+  color: $color-blue;
+}
+// Text color end
+
+// Line height
+.lh-1-0{
+  line-height: 1;
+}
+.lh-1-5{
+  line-height: 1.5;
+}
+.lh-1-75{
+  line-height: 1.75;
+}
+.lh-2-0{
+  line-height: 2;
+}
+// Line height end
+
+main{
+  margin-top: 148px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 167px;
+  }
+
+  @media screen and (max-width: 375px) {
+    margin-top: 190px;
+  }
+}
+
+// Top notification
+.notification{
+  background-color: $color-green-light;
+  font-size: 15px;
+  padding: 16px 0;
+  
+  .container{
+    display: flex;
+    align-items: center;
+  }
+
+  .badge{
+    background-color: $color-primary;
+    color: white;
+    font-weight: 700;
+    border-radius: 100px;
+    height: 26px;
+    width: 64px;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 14px;
+  }
+}
+
+.box{
+  background-color: $color-primary;
+  padding: 32px;
+  border-radius: 40px;
+}
+
+.typo-title{
+  font-size: 40px;
+  font-weight: 700;
+
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+  }
+}
+
+section#hero{
+  position: relative;
+  background-color: $color-primary;
+  min-height: 510px;
+
+  @media screen and (max-width: 768px) {
+    padding: 30px 0 0 0;
+    min-height: 0;
+  }
+
+  .big-title{
+    @media screen and (max-width: 768px) {
+      font-size: 32px;
+    }
+  }
+
+  .rounded-bottom{
+    position: absolute;
+    width: 100%;
+    bottom: -1px;
+  }
+
+  .row-img{
+    max-width: 90%;
+    margin: 0 auto;
+
+    .left{
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      img{
+        width: 50%;
+        padding-bottom: 50px;
+
+        @media screen and (max-width: 992px) {
+          width: 100%;
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    .right{
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      img{
+        width: 50%;
+        @media screen and (max-width: 992px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .blur{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+}
+
+section#about-us{
+  padding: 50px 0;
+  .title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    background-color: $color-primary;
+    border-radius: 100px;
+    padding: 16px;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+    }
+
+  }
+
+  .wrapper{
+    position: relative;
+    .molecul{
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  
+    .partial-33{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+}
+
+section#wallet{
+  padding: 50px 0;
+
+  .btn-playstore{
+    background-color: $color-primary;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 100px;
+    height: 100px;
+    display: inline-flex;
+    align-items: center;
+    padding: 16px 38px;
+  }
+}
+
+section#digitalFamily{
+  padding: 50px 0;
+  position: relative;
+
+  .blur{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .blur-2{
+    position: absolute; 
+    right: 40px; 
+    bottom: 0;
+    @media screen and (max-width: 768px) {
+      right: 0;
+    }
+  }
+
+  .img-family{
+    width: 60%;
+    @media screen and (max-width: 768px) {
+      width: 80%;
+    }
+  }
+
+  .img-token{
+    @media screen and (max-width: 768px) {
+      width: 40%;
+    }
+  }
+
+  .box{
+    min-height: 474px;
+    @media screen and (max-width: 768px) {
+      min-height: 0;
+    }
+  }
+}
+
+section#benefit{
+  position: relative;
+  padding: 50px 0 150px 0;
+
+  .box{
+    min-height: 592px;
+    
+    @media screen and (max-width: 768px) {
+      min-height: 0;
+    }
+
+    img{
+      @media screen and (max-width: 768px) {
+        width: 30%;
+      }
+    }
+  }
+
+  .molecul{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+section#teams{
+  position: relative;
+  padding: 80px 0 50px 0;
+
+  .blur{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .manajemen{
+    border-right: 5px solid $color-primary;
+
+    @media screen and (max-width: 768px) {
+      border-right: 0;
+    }
+  }
+
+  .user{
+    display: flex;
+    
+    &:not(:last-child){
+      margin-bottom: 60px;
+    }
+  }
+
+  .avatar{
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+  }
+}
+
+section#roadmap{
+  padding: 50px 0 120px 0;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 0;
+  }
+
+  .hori-timeline {
+    .events {
+      border-bottom: 3px solid black;
+
+      @media screen and (max-width: 768px) {
+        border-bottom: 0;
+      }
+
+      .event-list {
+        position: relative;
+        padding: 0 20px 70px 20px;
+        margin-right: 0;
+        display: inline-block;
+        width: 24%;
+
+        @media screen and (max-width: 768px) {
+          display: block;
+          width: 100%;
+          padding: 100px 0 0 0;
+        }
+
+        &--content{
+          background-color: $color-primary;
+          border-radius: 20px;
+          padding: 20px;
+
+          @media screen and (max-width: 768px) {
+            margin-bottom: 50px;
+          }
+
+          ul{
+            padding-inline-start: 20px;
+          }
+        }    
+        
+        .event-date {
+          position: absolute;
+          bottom: -50px;
+          left: 0;
+          right: 0;
+          width: 98px;
+          height: 98px;
+          border-radius: 50%;
+          background-color: $color-yellow;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: black;
+          font-weight: 500;
+          font-size: 20px;
+          margin: 0 auto;
+          @media screen and (max-width: 768px) {
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+section#buy{
+  padding: 50px 0;
+}
+
+section#contact-us{
+  position: relative;
+  padding: 50px 0;
+  margin-bottom: 50px;
+
+  .molecul{
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+  .blur{
+    position: absolute;
+    bottom: 0;
+    right: 40px;
+  }
+  .img-contact{
+    width: 70%;
+  }
+}
+
+footer{
+  background-color: #1A1919;
+  padding: 45px 0 0 0;
+  
+  address{
+    color: rgba(185, 185, 188, 0.72);
+    font-size: 12px;
+    line-height: 1.75;
+  }
+
+  .footer-bottom{
+    background-color: black;
+    padding: 20px 0;
+    color: rgba(185, 185, 188, 0.72);
+    font-size: 12px;
+  }
+}
+
+
+
+
+
+
