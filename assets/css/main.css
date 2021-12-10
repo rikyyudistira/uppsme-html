@@ -474,6 +474,10 @@ section#hero {
     min-height: 0;
   }
 }
+section#hero .big-title {
+  text-align: center;
+  margin: 0 auto;
+}
 @media screen and (max-width: 768px) {
   section#hero .big-title {
     font-size: 32px;
