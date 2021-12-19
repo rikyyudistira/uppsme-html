@@ -78,6 +78,7 @@ body{
   font-family: 'DM Sans', sans-serif;
   max-width: 1600px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 a:hover{
@@ -142,8 +143,8 @@ a:hover{
 .btn-xl{
   font-weight: 700;
   font-size: 24px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .btn-info{
@@ -222,6 +223,16 @@ a:hover{
       height: 90px;
     }
   }
+}
+
+.btn-playstore{
+  background-color: $color-primary;
+  box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 100px;
+  height: 100px;
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 38px;
 }
 // Button end
 
@@ -408,16 +419,6 @@ section#about-us{
 
 section#wallet{
   padding: 50px 0;
-
-  .btn-playstore{
-    background-color: $color-primary;
-    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.5);
-    border-radius: 100px;
-    height: 100px;
-    display: inline-flex;
-    align-items: center;
-    padding: 16px 38px;
-  }
 }
 
 section#digitalFamily{
@@ -629,8 +630,72 @@ footer{
   }
 }
 
+.owl-theme .owl-dots .owl-dot.active span{
+  width: 60px;
+  background-color: $color-primary;
+}
 
+section#slider{
+  padding: 50px 0;
 
+  @media screen and (max-width: 768px) {
+    padding: 10px 0;
+  }
+}
+
+section#get-upps{
+  position: relative;
+  padding-bottom: 100px;
+  .partial{
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+section#feature{
+  padding: 50px 0;
+}
+
+section#launcing{
+  position: relative;
+
+  .aset-digital{
+    @media screen and (max-width: 768px) {
+      height: 480px;
+      object-fit: cover;
+    }
+  }
+
+  .partial{
+    position: absolute;
+    top: -140px;
+    right: 0;
+  }
+
+  .content{
+    padding: 90px 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    @media screen and (max-width: 768px) {
+      padding: 32px 0;
+    }
+
+  }
+
+  .partial2{
+    margin-top: -100px;
+  }
+}
+
+.relative{
+  position: relative;
+}
+
+section#social-media{
+  padding: 50px 0;
+}
 
 
 

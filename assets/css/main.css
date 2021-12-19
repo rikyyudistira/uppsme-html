@@ -251,6 +251,7 @@ body {
   font-family: "DM Sans", sans-serif;
   max-width: 1600px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 a:hover {
@@ -310,8 +311,8 @@ a:hover {
 .btn-xl {
   font-weight: 700;
   font-size: 24px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .btn-info {
@@ -380,6 +381,16 @@ a:hover {
 .btn-token .token-icon.lg {
   width: 103px;
   height: 90px;
+}
+
+.btn-playstore {
+  background-color: #48DA83;
+  box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 100px;
+  height: 100px;
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 38px;
 }
 
 .text-yellow {
@@ -560,15 +571,6 @@ section#about-us .wrapper .partial-33 {
 
 section#wallet {
   padding: 50px 0;
-}
-section#wallet .btn-playstore {
-  background-color: #48DA83;
-  box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.5);
-  border-radius: 100px;
-  height: 100px;
-  display: inline-flex;
-  align-items: center;
-  padding: 16px 38px;
 }
 
 section#digitalFamily {
@@ -769,6 +771,70 @@ footer .footer-bottom {
   padding: 20px 0;
   color: rgba(185, 185, 188, 0.72);
   font-size: 12px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  width: 60px;
+  background-color: #48DA83;
+}
+
+section#slider {
+  padding: 50px 0;
+}
+@media screen and (max-width: 768px) {
+  section#slider {
+    padding: 10px 0;
+  }
+}
+
+section#get-upps {
+  position: relative;
+  padding-bottom: 100px;
+}
+section#get-upps .partial {
+  position: absolute;
+  bottom: 0;
+}
+
+section#feature {
+  padding: 50px 0;
+}
+
+section#launcing {
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  section#launcing .aset-digital {
+    height: 480px;
+    object-fit: cover;
+  }
+}
+section#launcing .partial {
+  position: absolute;
+  top: -140px;
+  right: 0;
+}
+section#launcing .content {
+  padding: 90px 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  section#launcing .content {
+    padding: 32px 0;
+  }
+}
+section#launcing .partial2 {
+  margin-top: -100px;
+}
+
+.relative {
+  position: relative;
+}
+
+section#social-media {
+  padding: 50px 0;
 }
 
 /*# sourceMappingURL=main.css.map */
