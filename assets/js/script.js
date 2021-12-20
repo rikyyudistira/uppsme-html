@@ -1,10 +1,10 @@
 $( document ).ready(function() {
   var text = [
-    "Percaya gak sih, simpan aset digital bisa bayarin Saldo OVO kamu seumur hidup?", 
-    "Percaya gak sih, simpan aset digital bisa bayarin Makan kamu seumur hidup?",
-    "Percaya gak sih, simpan aset digital bisa bayarin Voucher Game kamu seumur hidup?",
-    "Percaya gak sih, simpan aset digital bisa bayarin belanja eCommerce kamu seumur hidup?",
-    "Percaya gak sih, simpan aset digital bisa bayarin Kuota Data kamu seumur hidup?"
+    'Percaya gak sih, simpan aset digital bisa bayarin Saldo OVO kamu seumur hidup?', 
+    'Percaya gak sih, simpan aset digital bisa bayarin Makan kamu seumur hidup?',
+    'Percaya gak sih, simpan aset digital bisa bayarin Voucher Game kamu seumur hidup?',
+    'Percaya gak sih, simpan aset digital bisa bayarin belanja eCommerce kamu seumur hidup?',
+    'Percaya gak sih, simpan aset digital bisa bayarin Kuota Data kamu seumur hidup?'
   ];
   var counter = 0;
   var elem = document.getElementById("changeText");
